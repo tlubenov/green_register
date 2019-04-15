@@ -27,24 +27,24 @@ MAP
       CONNECTION "host=127.0.0.1 port=5432 dbname=razgrad user=gis password=gis"
       DATA "geom from raz_parcels using unique gid using srid=7801"
       PROJECTION
-#        "init=epsg:7801"
-        "proj=lcc"
-        "lat_1=42"
-        "lat_2=43.33333333333334"
-        "lat_0=42.66787568333333"
-        "lon_0=25.5"
-        "x_0=500000"
-        "y_0=4725824.3591"
-        "ellps=GRS80"
-        "units=m"
-        "no_defs"
+        "init=epsg:7801"
+#        "proj=lcc"
+#        "lat_1=42"
+#        "lat_2=43.33333333333334"
+#        "lat_0=42.66787568333333"
+#        "lon_0=25.5"
+#        "x_0=500000"
+#        "y_0=4725824.3591"
+#        "ellps=GRS80"
+#        "units=m"
+3        "no_defs"
       END
       METADATA
         "wms_title" "parcels"
       END
       CLASS
         STYLE
-          COLOR 20 40 20
+          outlineCOLOR 20 40 20
         END
       END
     END
