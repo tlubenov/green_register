@@ -44,7 +44,9 @@ MAP
       END
       CLASS
         STYLE
-          outlineCOLOR 20 40 20
+          outlineCOLOR 20 20 20
+          width 1
+          antialias true
         END
       END
     END
