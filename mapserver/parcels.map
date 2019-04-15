@@ -1,35 +1,43 @@
-PROJECTION
-  "init=epsg:3857"
-END
+MAP
+    NAME "parcels map"
+    STATUS ON
+    SIZE 256 256
 
-WEB
-  METADATA
-    "wms_title" "MapsLab.io cloud mapping and development"
-    "wms_onlineresource" "http://18.185.69.236/cgi-bin/mapserv?"
-    "wms_enable_request" "*"
-    "wms_srs" "EPSG:3857"
-    "wms_feature_info_mime_type" "text/html"
-    "wms_format" "image/png"
-  END
-END
 
-LAYER
-  NAME         parcels
-  STATUS       on
-  TYPE         POLYGON
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "host=127.0.0.1 port=5432 dbname=razgrad user=gis password=gis"
-  DATA "the_geom from raz_parcels"
-
-  PROJECTION
-    "init=epsg:7801"
-  END
-  METADATA
-    "wms_title" "parcels"
-  END
-  CLASS
-    STYLE
-      COLOR 20 40 20
+    PROJECTION
+      "init=epsg:3857"
     END
-  END
+
+    WEB
+      METADATA
+        "wms_title" "MapsLab.io cloud mapping and development"
+        "wms_onlineresource" "http://18.185.69.236/cgi-bin/mapserv?"
+        "wms_enable_request" "*"
+        "wms_srs" "EPSG:3857"
+        "wms_feature_info_mime_type" "text/html"
+        "wms_format" "image/png"
+      END
+    END
+
+    LAYER
+      NAME         parcels
+      STATUS       on
+      TYPE         POLYGON
+      CONNECTIONTYPE POSTGIS
+      CONNECTION "host=127.0.0.1 port=5432 dbname=razgrad user=gis password=gis"
+      DATA "the_geom from raz_parcels"
+
+      PROJECTION
+        "init=epsg:7801"
+      END
+      METADATA
+        "wms_title" "parcels"
+      END
+      CLASS
+        STYLE
+          COLOR 20 40 20
+        END
+      END
+    END
+
 END
