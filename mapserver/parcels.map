@@ -20,13 +20,12 @@ MAP
     END
 
     LAYER
-      NAME         parcels
+      NAME         "parcels"
       STATUS       on
       TYPE         POLYGON
       CONNECTIONTYPE POSTGIS
       CONNECTION "host=127.0.0.1 port=5432 dbname=razgrad user=gis password=gis"
-      DATA "the_geom from raz_parcels"
-
+      DATA "the_geom from raz_parcels using unique gid using srid=7801"
       PROJECTION
         "init=epsg:7801"
       END
