@@ -37,7 +37,7 @@ MAP
 #        "y_0=4725824.3591"
 #        "ellps=GRS80"
 #        "units=m"
-3        "no_defs"
+#        "no_defs"
       END
       METADATA
         "wms_title" "parcels"
